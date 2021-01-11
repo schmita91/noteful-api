@@ -1,5 +1,3 @@
-const { CONNECTION_STRING } = require('./config')
-
 const knex = require('knex')
 
 const app = require('./app'),
