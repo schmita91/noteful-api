@@ -1,3 +1,5 @@
+const { CONNECTION_STRING } = require('./config')
+
 const knex = require('knex')({
     client: 'pg',
     version: '6.14.8',
@@ -5,7 +7,7 @@ const knex = require('knex')({
 });
 
 const app = require('./app'),
-  { PORT, DATABASE_URL, CONNECTION_STRING } = require('./config');
+  { PORT, DATABASE_URL } = require('./config');
 
 const db = knex({
   client: 'pg',
