@@ -6,6 +6,10 @@ const app = require('./app'),
 const db = knex({
   client: 'pg',
   connection: DATABASE_URL,
+  type: 'postgres',
+  extra: {
+    ssl: true,
+  }
 });
 
 app.set('db', db);
